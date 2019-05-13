@@ -21,15 +21,19 @@ def help
 end
 
 def list(songs)
-  
   songs.each_with_index { |item, index|
     puts "#{index + 1}. #{item}"
   }
-  
 end
 
-# def play(songs)
-#   "Please enter a song name or number:"
-#   name_number: gets.chomp
-#   if  name_number == 
-# end
+def play(songs)
+  "Please enter a song name or number:"
+  name_number = gets.chomp
+    if songs.include?(name_number)
+      puts "Playing #{name_number}"
+    elsif
+      (user_input.to_i).between?(1, songs.size)
+    else 
+      puts "Invalid input, please try again"
+    end
+end
